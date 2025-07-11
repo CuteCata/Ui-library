@@ -12,20 +12,15 @@
 - 🔧 **API ที่ขยายได้**: การออกแบบแบบเชิงวัตถุที่สะอาดเพื่อการปรับแต่งที่ง่าย
 
 ## การติดตั้ง
-
-1. สร้าง ModuleScript ใน `ReplicatedStorage` ชื่อ `UILibrary`
-2. คัดลอกเนื้อหา `ui_library.lua` ทั้งหมดลงใน ModuleScript
-3. เรียกใช้โมดูลใน LocalScript ของคุณ
-
 ```lua
-local UI = require(game.ReplicatedStorage.UILibrary)
+local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/CuteCata/Ui-library/refs/heads/main/ui_library.lua"))()
 ```
 
 ## การเริ่มต้นอย่างรวดเร็ว
 
 ```lua
 -- การตั้งค่าหน้าต่างพื้นฐาน
-local UI = require(game.ReplicatedStorage.UILibrary)
+local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/CuteCata/Ui-library/refs/heads/main/ui_library.lua"))()
 
 local window = UI.CreateWindow({
     Title = "GUI สุดเจ๋งของฉัน",
@@ -366,7 +361,7 @@ local tab4 = window:CreateTab("เครื่องมือ", "square")
 ## ตัวอย่างสมบูรณ์
 
 ```lua
-local UI = require(game.ReplicatedStorage.UILibrary)
+local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/CuteCata/Ui-library/refs/heads/main/ui_library.lua"))()
 
 -- สร้างหน้าต่างหลัก
 local window = UI.CreateWindow({
